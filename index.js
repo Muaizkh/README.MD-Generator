@@ -17,26 +17,6 @@ const questions = [
     },
     {
         type: "input",
-        message: "What was your motivation?",
-        name: "description",
-    },
-     {
-        type: "input",
-        message: "Why did you build this project?",
-        name: "description",
-    },
-    {
-        type: "input",
-        message: "What problem does it solve?",
-        name: "description",
-    },
-    {
-        type: "input",
-        message: "What did you learn?",
-        name: "description",
-    },
-    {
-        type: "input",
         message: "Table of Contents.",
         name: "TOB",
     },
@@ -57,25 +37,25 @@ const questions = [
     },
     {
         type: "input",
+        message: "How do you test this project?",
+        name: "test",
+    },
+    {
+        type: "input",
         message: "What license does your project utilize?",
         name: "license",
+        choices: ["MIT", "Apache 2.0", "None"]
     },
+    {
+        type: "input",
+        message: "What is your email?",
+        name: "email",
+    },  
     {
         type: "input",
         message: "What is your github?",
-        name: "badges",
-    },
-    {
-        type: "input",
-        message: "What is your project title?",
-        name: "features",
-    },
-    {
-        type: "input",
-        message: "What is your project title?",
-        name: "features",
-    },
-   
+        name: "github",
+    },  
 ];
 
 // TODO: Create a function to write README file
@@ -92,8 +72,7 @@ function writeToFile(data) {
 // TODO: Create a function to initialize app
 // this allows the prompts to begin when trying to create the readme and then writes them into a file
 function init() {
-    inquirer
-    .propmt (questions)
+    inquirer.propmt (questions)
     .then (writeToFile);
 }
 // Function call to initialize app

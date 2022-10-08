@@ -36,18 +36,22 @@ function renderLicenseSection(license) {
   let LicenseSection = '';
   if (license === 'None') {
     LicenseSection = 'None';}
-    else if(license === 'Apache 2.0') {
-      license
-
+    else if(license === 'MIT') {
+      LicenseSection = 'A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.'
     }
+    else if(license === 'Apache 2.0') {
+      LicenseSection = 'A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.'
+    }
+    else if(license === 'Boost Software') {
+      LicenseSection = 'A simple permissive license only requiring preservation of copyright and license notices for source (and not binary) distribution. Licensed works, modifications, and larger works may be distributed under different terms and without source code.'
+    }
+    return LicenseSection;
   }
-
-
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return 
   `# ${data.title}
-${getLicen}
+
 
 ## Description
 ${data.description}

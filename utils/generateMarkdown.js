@@ -81,8 +81,8 @@ ${data.test}
 ${data.license}
 
 ## Contact
-${data.contact}
-
+${data.contacts} - Please feel free to contact this email with any concerns and questions 
+${data.contact} - Visit my github 
 `;
 }
 

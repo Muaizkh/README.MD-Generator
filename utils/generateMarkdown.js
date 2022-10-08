@@ -33,8 +33,15 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  
-}
+  let LicenseSection = '';
+  if (license === 'None') {
+    LicenseSection = 'None';}
+    else if(license === 'Apache 2.0') {
+      license
+
+    }
+  }
+
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -43,8 +50,10 @@ function generateMarkdown(data) {
 ${getLicen}
 
 ## Description
+${data.description}
 
 ## Table of Contents
+- [Description]
 - [Installation]
 `;
 }
